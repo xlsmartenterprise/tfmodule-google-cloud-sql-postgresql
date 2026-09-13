@@ -209,7 +209,11 @@ resource "google_sql_database_instance" "default" {
 
   lifecycle {
     ignore_changes = [
-      settings[0].disk_size
+      settings[0].disk_size,
+      settings[0].final_backup_config,
+      settings[0].version,
+      available_maintenance_versions,
+      maintenance_version,
     ]
   }
 

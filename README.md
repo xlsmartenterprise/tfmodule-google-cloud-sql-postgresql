@@ -13,6 +13,7 @@ Terraform module for provisioning and managing Google Cloud SQL PostgreSQL insta
 - **User Management** - Built-in and IAM users with password policies and validation
 - **Read Replicas** - Cross-region replicas with independent configuration
 - **KMS Integration** - Autokey support and custom encryption key management
+- **Drift Protection** - Built-in lifecycle rules to ignore automated Cloud SQL maintenance versions, settings revisions, and final backup configurations
 
 ## Usage
 

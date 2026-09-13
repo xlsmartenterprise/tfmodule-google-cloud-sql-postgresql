@@ -102,6 +102,10 @@ resource "google_sql_database_instance" "replicas" {
       settings[0].disk_size,
       settings[0].maintenance_window,
       encryption_key_name,
+      settings[0].final_backup_config,
+      settings[0].version,
+      available_maintenance_versions,
+      maintenance_version,
     ]
   }
 
