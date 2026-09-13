@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.2] - 2026-09-13
+
+### Fixed
+- Removed redundant computed-only attributes (`version`, `available_maintenance_versions`, `maintenance_version`) from `lifecycle.ignore_changes` across primary instance and read replicas to eliminate Terraform validation warnings while retaining full `final_backup_config` and `disk_size` drift protection
+
 ## [v1.0.1] - 2026-09-13
 
 ### Fixed

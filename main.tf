@@ -20,7 +20,7 @@ locals {
 
   # Password policy for default user
   default_user_policy = var.default_user_password_policy != null ? var.default_user_password_policy : var.password_policy_config
-  
+
   # Password policies for additional users with fallback to default
   additional_users_policies = {
     for username, user in local.users : username => {
@@ -211,9 +211,6 @@ resource "google_sql_database_instance" "default" {
     ignore_changes = [
       settings[0].disk_size,
       settings[0].final_backup_config,
-      settings[0].version,
-      available_maintenance_versions,
-      maintenance_version,
     ]
   }
 
